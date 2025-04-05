@@ -1,0 +1,36 @@
+function renderLikeButton(indexBooks) {
+    let LikeButtonRef = document.getElementById(`${indexBooks}like-button`);
+
+    // Prüfung, ob aktueller Like-Status liked = true oder not like = false => je nach Ergebnis das entsprechende Herz anzeigen
+    if(books[indexBooks].liked === true){
+        LikeButtonRef.src = "./assets/img/heart.png";
+    }else{
+        LikeButtonRef.src = "./assets/img/heart-2.png";
+    } 
+}
+
+// Aktualisierung der Like-Zahl
+
+function renderLikesCounter(indexBooks) {
+    let LikeCounterRef = document.getElementById(`${indexBooks}book-like`);
+    LikeCounterRef.innerHTML="";
+    LikeCounterRef.innerHTML += `${books[indexBooks].likes}`;
+}
+
+// Veränderung img-Herz bei Like
+
+function changeLikeButton(indexBooks) {
+    let LikeButtonRef = document.getElementById(`${indexBooks}like-button`);
+    if(books[indexBooks].liked === false){
+        LikeButtonRef.src = "./assets/img/heart.png";
+        books[indexBooks].likes ++;
+        books[indexBooks].liked = true;
+    }else if(books[indexBooks].liked === true) {
+        LikeButtonRef.src = "./assets/img/heart-2.png";
+        books[indexBooks].likes --;
+        books[indexBooks].liked = false;
+    }
+
+    renderLikeButton(indexBooks);
+    renderLikesCounter(indexBooks);
+}

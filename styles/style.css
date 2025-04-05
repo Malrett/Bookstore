@@ -1,0 +1,144 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(9, 29, 45);
+  margin: 0;
+  font-family: raleway;
+  font-variant-numeric: lining-nums;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: rgb(23, 42, 58);
+  height: 90px;
+  color: whitesmoke;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 40px;
+  gap: 16px;
+}
+
+.spacer {
+  height: 90px;
+}
+
+.book {
+  width: 420px;
+  color: whitesmoke;
+  background-color: rgb(16, 58, 84);
+  border-radius: 15px;
+  padding: 0;
+  margin: 40px 0 40px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.book_img {
+  height: 175px;
+}
+
+.img_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(circle, rgb(48, 153, 201) -35%, rgb(16, 58, 84) 81%);
+}
+
+h2 {
+  margin: 0;
+  padding: 16px;
+}
+
+h3 {
+  margin: 0;
+  padding: 16px 16px 0 16px;
+}
+
+.upper_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(48, 153, 201);
+}
+
+.middle_section {
+  padding: 16px;
+}
+
+.price {
+  color: rgb(218, 3, 3);
+  font-size: 32px;
+}
+
+.comments_section {
+  height: 180px;
+  overflow-y: scroll;
+  margin: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background: rgb(23, 42, 58);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(23, 42, 58);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(48, 153, 201);
+  border-radius: 10px;
+}
+
+td {
+  vertical-align: top;
+}
+
+td:first-child {
+  width: 120px;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+input {
+  background-color: rgb(27, 105, 147);
+  color: rgb(48, 153, 201);
+  box-sizing: border-box;
+  border: none;
+  border-bottom: solid 2px rgb(48, 153, 201);
+  outline: none;
+  width: 340px;
+  padding: 0 12px 0 12px;
+}
+
+::placeholder {
+  color: rgb(48, 153, 201);
+}
+
+.input img {
+  cursor: pointer;
+}

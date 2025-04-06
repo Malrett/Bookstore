@@ -1,14 +1,3 @@
-function renderLikeButton(indexBooks) {
-    let LikeButtonRef = document.getElementById(`${indexBooks}like-button`);
-
-    // Prüfung, ob aktueller Like-Status liked = true oder not like = false => je nach Ergebnis das entsprechende Herz anzeigen
-    if(books[indexBooks].liked === true){
-        LikeButtonRef.src = "./assets/img/heart.png";
-    }else{
-        LikeButtonRef.src = "./assets/img/heart-2.png";
-    } 
-}
-
 // Aktualisierung der Like-Zahl
 
 function renderLikesCounter(indexBooks) {

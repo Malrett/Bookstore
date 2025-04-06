@@ -6,6 +6,7 @@ function renderAllBooks() {
     contentRef.innerHTML += getBookTemplate(indexBooks, bookPrice);
 
     renderComments(indexBooks);
+    showHeart(indexBooks);
   }
 }
 
@@ -21,15 +22,34 @@ function renderComments(indexBooks) {
 function addComment(indexBooks) {
   let commentInputRef = document.getElementById("comment_input" + indexBooks);
   let userComment = commentInputRef.value;
-
   if (userComment == "") {
     return;
   }
-
   books[indexBooks].comments.push({ name: "Malte", comment: userComment });
   // books[indexBooks].comments.comment.push(comment);
 
   renderComments(indexBooks);
-
   commentInputRef.value = "";
+}
+
+function showHeart(indexBooks) {
+  let heartButtonRef = document.getElementById("like_button" + indexBooks);
+  if (books[indexBooks].liked === true) {
+    heartButtonRef.src = "./img/like.png";
+  } else {
+    heartButtonRef.src = "./img/like_empty.png";
+  }
+}
+
+function changeHeart(indexBooks) {
+  let heartButtonRef = document.getElementById("like_button" + indexBooks);
+  if (books[indexBooks].liked === true) {
+    heartButtonRef.src = "./img/like_empty.png";
+    books[indexBooks].liked = false;
+  } else if (books[indexBooks].liked === false) {
+    heartButtonRef.src = "./img/like.png";
+    books[indexBooks].liked = true;
+  }
+
+  showHeart(indexBooks);
 }

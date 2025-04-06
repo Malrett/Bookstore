@@ -72,6 +72,10 @@ h3 {
   align-items: center;
 }
 
+.heart_button {
+  cursor: pointer;
+}
+
 .separator {
   width: 100%;
   height: 2px;

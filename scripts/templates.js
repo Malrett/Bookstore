@@ -10,7 +10,7 @@ function getBookTemplate(indexBooks, bookPrice) {
   <div class="middle_section">
     <p class="price">${bookPrice} €</p>
     <div class="likes_section"<p>${books[indexBooks].likes}</p>
-    <p>${books[indexBooks].liked}</p></div>
+    <img class="heart_button" onclick="changeHeart(${indexBooks})" src="" id="like_button${[indexBooks]}"></div>
     <table>
       <tr>
         <td><p><b>Autor:</b></p></td>
